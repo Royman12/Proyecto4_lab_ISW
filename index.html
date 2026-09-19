@@ -46,7 +46,7 @@
     <nav class="navegacion">
       <a href="#catalogo">Catálogo</a>
       <a href="#carrito">Carrito</a>
-      <a href="hoja-de-vida.html">Mi hoja de vida</a> 
+      <a href="hoja-de-vida.html">Mi hoja de vida</a>
     </nav>
 
     <!-- Aviso de conexión: JavaScript lo muestra con los eventos online/offline -->
@@ -67,10 +67,7 @@
           <div class="grupo-filtro">
             <label for="filtro-categoria">Filtrar por categoría</label>
             <select id="filtro-categoria">
-              <option value="todos">Todas las categorías</option>
-              <option value="fruta">Frutas</option>
-              <option value="verdura">Verduras</option>
-              <option value="bebida">Bebidas</option>
+              <!-- Las opciones se generan dinámicamente desde JavaScript -->
             </select>
           </div>
         </div>
@@ -163,5 +160,17 @@
     <footer class="pie">
       <p>Ejemplo académico para el Laboratorio de Ingeniería de Software 3</p>
     </footer>
+    <!-- ==================================================================
+     MODAL DE DETALLES DEL PRODUCTO
+     Arranca oculto con la clase "oculto".
+     ================================================================== -->
+    <div id="modal-detalles" class="modal oculto">
+      <div class="modal-contenido">
+        <button id="btn-cerrar-modal" class="boton-cerrar">×</button>
+        <div id="modal-info">
+          <!-- Aquí se inyectará la información del producto -->
+        </div>
+      </div>
+    </div>
   </body>
 </html>

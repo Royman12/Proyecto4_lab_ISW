@@ -372,10 +372,11 @@ p { margin: 0; }
     background-color:#6d6e6e;
 }
 
-/* Clase de estado que JavaScript agrega y quita con classList */
+/* Clase de estado que JavaScript agrega y quita con classList 
 .oculto {
     display: none;
-}
+}*/
+
 /* =========================================================================
    Menu de navegación
    ========================================================================= */
@@ -397,4 +398,52 @@ p { margin: 0; }
 
 .navegacion a:hover {
     text-decoration: underline;
+}
+/* =========================================================================
+   MODAL DE DETALLES DEL PRODUCTO
+   ========================================================================= */
+
+/* El fondo oscuro que cubre toda la pantalla */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal.oculto {
+    display: none;
+}
+
+/* La tarjeta blanca del modal */
+.modal-contenido {
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    padding: calc(var(--espaciado-base) * 1.5);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+/* Botón de cerrar (la X) */
+.boton-cerrar {
+    position: absolute;
+    top: calc(var(--espaciado-base) * 0.5);
+    right: calc(var(--espaciado-base) * 0.5);
+    background: none;
+    border: none;
+    font-size: calc(var(--espaciado-base) * 1.5);
+    cursor: pointer;
+    color: var(--color-texto-suave);
+}
+
+.boton-cerrar:hover {
+    color: var(--color-error);
 }
